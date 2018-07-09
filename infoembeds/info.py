@@ -1,4 +1,4 @@
-# update 9June18 - Changed names of Staff -elijah
+# update 13jan18 - fixed a few things including new staff names
 import discord
 from discord.ext import commands
 from cogs.utils import checks
@@ -76,21 +76,18 @@ We collect this to make your experience better, and in the case of possibly dele
 
         icon = ctx.message.server.icon_url
         embed = discord.Embed(colour=0xCFFF63)
-        embed.add_field(name='Administrators', value="""- <@298166754331459586>
+        embed.add_field(name='Administrators', value="""- <@235542999063461888>
 - <@222147236728012800>
-- <@167736120400936960>
 - <@333621621116108800>""", inline=False)
-        embed.add_field(name='Senior Moderators', value="""- <@231785539370614784>
+        embed.add_field(name='Senior Moderators', value="""- <@179645538533244929>
+- <@298166754331459586>
+- <@231785539370614784>
+- <@121005551877357569> 
+- <@167736120400936960>""", inline=False)
+        embed.add_field(name='Moderators', value="""- <@70221374404173824>
 - <@267723762563022849>
-- <@235542999063461888> 
-- <@182942393371197440>
-- <@189125691504066561>""", inline=False)
-        embed.add_field(name='Moderators', value="""- <@233753965353893898>
-- <@179645538533244929>
-- <@155507643115503617>
-- <@228700305263558656>
-- <@70221374404173824>""", inline=False)
-        embed.add_field(name='ToS Global Moderators', value="""- <@224737113210355712>""", inline=False)
+- <@!115378623028002822>
+- <@232131655274332160>""", inline=False)
         embed.set_author(name='Staff List', icon_url=icon)
 
         await self.bot.say(embed=embed)
@@ -103,17 +100,17 @@ We collect this to make your experience better, and in the case of possibly dele
         spy = 'https://images-ext-2.discordapp.net/.eJwNyFEKgzAMANC79N9mretAQTyEJ-gk64I1KTYqMnb37X2-j9m3bHrzVi09wEGJURXv9qSFomWZRRZC-19QObmRV1NjxhVojQkrtNA-YCqXLZxgw4MqCUOOilXH-Tn4mwvO-c51IXhvvj_u-yZa.VyMAY7O3cPIU09jtrPQ4X92HbrQ'
         embed = discord.Embed(colour=0x5DADE2)
         embed.set_author(name='What can the staff roles do?', icon_url=spy)
-        embed.add_field(name='What are Game Moderators?', value="""- As the name suggests, Game Moderators are players who frequently play Town of Salem and have knowledge of what's breaking the rules and what's not.
-- When a report on Discord concerning a broken in-game rule, the Game Moderators will handle it.
-- Game Moderators are in most games and can take action immediately.
-- Game Moderators have the power to manage the messages in ToS related channels. This includes pinning and deleting messages. They can also block you from the ToS related channels.""", inline=False)
-        embed.add_field(name='What are Moderators?', value="""- Moderators can be considered as Semi-Administrators. They help moderate the games as well as moderate the server.
-- Moderators have the power to manage messages in every channel.
-- Moderators can kick or ban users, force nicknames if the user's name is offensive, block you from any channel, mute you, and assign roles. They also have perms in the voice chats.""", inline=False)
+        embed.add_field(name='What are Moderators?', value="""- As the name suggests, Moderators are players who frequently play Town of Salem and have knowledge of what's breaking the rules and what's not.
+- When a report on Discord concerning a broken in-game rule, the Moderators will handle it.
+- Moderators are in most games and can take action immediately.
+- Moderators have the power to manage the messages in ToS related channels. This includes pinning and deleting messages. They can also block you from the ToS related channels.""", inline=False)
+        embed.add_field(name='What are Senior Moderators?', value="""- Senior Moderators can be considered as Semi-Administrators. They help moderate the games as well as moderate the server.
+- Senior Moderators have the power to manage messages in every channel.
+- Senior Moderators can kick or ban users, force nicknames if the user's name is offensive, block you from any channel, mute you, and assign roles. They also have perms in the voice chats.""", inline=False)
         embed.add_field(name='What are Administrators?', value="""- Administrators run the server and keep everything together. This role has the most power.
 - Administrators can do EVERYTHING. They have every permission.
 - Administrators will oversee the entire server and make the important decisions.""", inline=False)
-        embed.set_footer(text='If you think any Staff Member is abusing their permissions or not doing a good job, DM an Administrator immediately. If the person you have concerns about is an Administrator, DM the Owner, henlo.', icon_url=ctx.message.server.icon_url)
+        embed.set_footer(text='If you think any Staff Member is abusing their permissions or not doing a good job, DM an Administrator immediately. If the person you have concerns about is an Administrator, DM the Owner, RainbowLegend#5491', icon_url=ctx.message.server.icon_url)
         await self.bot.say(embed=embed)
 
     @commands.command(no_pm=True, pass_context=True)
@@ -226,7 +223,7 @@ We collect this to make your experience better, and in the case of possibly dele
 
         coven = discord.Embed(colour=0xBF5FFF)
         coven.set_author(name='List of Coven Roles', icon_url=witch)
-        coven.add_field(name='Coven Evil', value="""- Coven Leader
+        coven.add_field(name='Coven Evil', value="""- CovenLeader
 - HexMaster
 - Medusa
 - Necromancer
